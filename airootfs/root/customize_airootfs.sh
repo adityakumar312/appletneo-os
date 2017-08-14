@@ -1,17 +1,30 @@
 #!/bin/bash
 
 set -e -u
-
 sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
-
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
-
 usermod -s /usr/bin/bash root
 cp -aT /etc/skel/ /root/
+
+#Create Liveuser
 useradd -m -p "" -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel" -s /bin/bash liveuser
 #chmod 700 /root
 chown -R liveuser:users /home/liveuser
+
+#Load Appletneo Configuration
+cd /usr/bin
+dconf load / < desktop.dconf
+cd -
+
+#Appletneo Name
+sed -i.bak 's/Arch Linux/Appletneo OS/g' /usr/lib/os-release
+sed -i.bak 's/ID=arch/ID=appletneo/g' /usr/lib/os-release
+sed -i.bak 's/ID_LIKE=archlinux/ID_LIKE=appletneolinux/g' /usr/lib/os-release
+sed -i.bak 's/www.archlinux.org/www.appletneo.com/g' /usr/lib/os-release
+sed -i.bak 's/bbs.archlinux.org/www.appletneo.com/g' /usr/lib/os-release
+sed -i.bak 's/bugs.archlinux.org/www.appletneo.com/g' /usr/lib/os-release
+cp /usr/lib/os-release /etc/os-release
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
