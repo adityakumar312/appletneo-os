@@ -1,0 +1,72 @@
+[org/gnome/shell]
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'dash-to-dock@micxgx.gmail.com', 'drop-down-terminal@gs-extensions.zzrough.org', 'openweather-extension@jenslody.de', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'refresh-wifi@kgshank.net', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+favorite-apps=['evolution.desktop', 'org.gnome.Nautilus.desktop', 'pamac-manager.desktop', 'google-chrome.desktop', 'gnome-control-center.desktop', 'spotify.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop', 'gnome-tweak-tool.desktop']
+
+[org/gnome/shell/extensions/user-theme]
+name='Appletneo'
+
+[org/gnome/shell/extensions/dash-to-dock]
+opaque-background=true
+background-opacity=0.0
+custom-theme-shrink=true
+click-action='minimize-or-overview'
+dock-position='BOTTOM'
+preferred-monitor=0
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+geometry='890x550+357+161'
+maximized=false
+
+[org/gnome/nautilus/desktop]
+home-icon-visible=false
+volumes-visible=false
+trash-icon-visible=false
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-last-coordinates=(27.183299999999999, 78.0167)
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-transparency-percent=32
+use-transparent-background=true
+
+[org/gnome/terminal/legacy]
+schema-version=uint32 3
+
+[org/gnome/evolution-data-server]
+network-monitor-gio-name=''
+migrated=true
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:////usr/share/backgrounds/gnome/FirewatchMinimalist2.jpg'
+primary-color='#ffffff'
+picture-options='zoom'
+secondary-color='#000000'
+
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/appletneo-os.png'
+show-desktop-icons=true
+color-shading-type='solid'
+primary-color='#000000'
+picture-options='zoom'
+secondary-color='#000000'
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'us')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+gtk-im-module='gtk-im-context-simple'
+icon-theme='Numix-Circle'
+gtk-theme='Arc'
+
+[org/zzrough/gs-extensions/drop-down-terminal]
+enable-animation=false
+first-start=false
+other-shortcut=['grave']
+transparency-level=uint32 95
+real-shortcut=['grave']
+shortcut-type='other'
