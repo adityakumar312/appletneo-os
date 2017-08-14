@@ -29,10 +29,28 @@ laptop-detect
 mlocate
 reflector
 tracker
-dosfstools
-ntfs-3g
 linux-headers
 broadcom-wl-dkms
+
+#Appletneo-iso-installer
+xtra-cmake-modules
+qt5-tools
+kconfig
+kcoreaddons
+solid
+yaml-cpp
+hwinfo
+qt5-svg
+polkit-qt5
+kdebase-runtime
+dmidecode
+ki18n
+squashfs-tools
+kpmcore
+qt5-webengine
+qt5ct
+qt5-styleplugins-git
+kparts
 
 ##VBox
 virtualbox-guest-modules-arch
@@ -74,11 +92,11 @@ gparted
 leafpad
 youtube-dl
 p7zip
-tracker
 conky
 conky-manager
 python-pip
 libreoffice-fresh
+neofetch
 
 #Aur-Packages
 gnome-shell-extension-refresh-wifi-git
